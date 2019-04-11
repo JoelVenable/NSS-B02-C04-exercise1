@@ -43,3 +43,7 @@ const bugSquasher = function (bug, squasher) {
 //  Has no effect on other things in system.  The function will always 
 //  return the same value when given the same inputs.
 
+bugSquasher('beetle', 'boot');
+bugSquasher('beetle','boot');
+bugSquasher('spider', 'thing next to my hand when I saw it');
+
