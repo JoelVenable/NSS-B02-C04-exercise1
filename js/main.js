@@ -47,3 +47,22 @@ bugSquasher('beetle', 'boot');
 bugSquasher('beetle','boot');
 bugSquasher('spider', 'thing next to my hand when I saw it');
 
+
+//  Impure functions  -- produce different results upon execution
+
+const noise = function() {
+  return Math.random();
+}
+
+console.log(`${noise()}`);
+console.log(`${noise()}`);
+console.log(`${noise()}`);
+console.log(`${noise()}`);
+
+//  Different results each time
+
+const updateDOM = function(message) {
+  const el = document.getElementById('messages');
+  el.innerHTML += message;
+}
+
