@@ -20,6 +20,8 @@
   console.log(`${firstName} ${{lastName}}`);
 }
 
+// Breaks DRY principle! Let's do this instead:
+
 
 sayName("Haynes", "Jamal");
 sayName("Gordon","Debra");
@@ -27,29 +29,17 @@ sayName("Irinov","Svetlana");
 sayName("Rodriguez","Sequina");
 
 
-
-
-
-
-
-
 function sayName(lastName, firstName) {
   console.log(`${firstName} ${lastName}`);
 }
 
 
+// Pure function 
 
-class Person {
-  constructor(lastName, firstName) {
-    this.lastName = lastName;
-    this.firstName = firstName;
-  }
-
-  greet() {
-    console.log(`${this.firstName} ${this.lastName} says hello.`);
-  }
+const bugSquasher = function (bug, squasher) {
+  return `The ${bug} was squashed by a ${squasher}`;
 }
 
-var jamal = new Person("Haynes", "Jamal");
+//  Has no effect on other things in system.  The function will always 
+//  return the same value when given the same inputs.
 
-jamal.greet();
